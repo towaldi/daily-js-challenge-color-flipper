@@ -64,6 +64,11 @@ a:hover, .btn:hover {
     background-color: #efefef;
 }
 
+.active {
+    /* other */
+    background-color: #d7d7d7;
+}
+
 main {
     /* display & box model */
     display: flex;

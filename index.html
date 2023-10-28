@@ -13,13 +13,13 @@
         <h2>Color Flipper</h2>
         <ul>
             <li>
-                <a href="index.html">Named Color</a>
+                <a id="named-color" class="active" href="index.html">Named Color</a>
             </li>
             <li>
-                <a href="index.html">HEX</a>
+                <a id="hex-color" class="" href="hex-index.html">HEX</a>
             </li>
             <li>
-                <a href="index.html">RGB</a>
+                <a id="rgb-color" class="" href="rgb-index.html">RGB</a>
             </li>
         </ul>
     </header>
@@ -28,11 +28,12 @@
     <main>
         <div class="color-bar">
             <h1>Selected Color:</h1>
-            <p class="color-name">#000</p>
+            <p class="color-name">Named Color</p>
         </div>
         <button id="btn" class="btn">Generate</button>
     </main>
     <!-- link js -->
+    <script src="database.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
