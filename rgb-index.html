@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link css -->
+    <link rel="stylesheet" href="style.css">
+    <title>Color Flipper | Daily JS Challenge</title>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <h2>Color Flipper</h2>
+        <ul>
+            <li>
+                <a id="named-color" class="" href="index.html">Named Color</a>
+            </li>
+            <li>
+                <a id="hex-color" class="" href="hex-index.html">HEX</a>
+            </li>
+            <li>
+                <a id="rgb-color" class="active" href="rgb-index.html">RGB</a>
+            </li>
+        </ul>
+    </header>
+
+    <!-- main -->
+    <main>
+        <div class="color-bar">
+            <h1>Selected Color:</h1>
+            <p class="color-name">RGB</p>
+        </div>
+        <button id="btn" class="btn">Generate</button>
+    </main>
+    <!-- link js -->
+    <script src="database.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

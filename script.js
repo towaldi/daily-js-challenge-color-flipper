@@ -24,10 +24,21 @@ let colorName = document.querySelector('.color-name');
  */
 
 btn.addEventListener('click', function() {
-    let randomNumber = generateRandomNumber();
-    console.log(randomNumber);
-    document.querySelector('body').style.backgroundColor = namedColors[0][randomNumber];
-    colorName.textContent = namedColors[0][randomNumber];
+    if (document.getElementById('named-color').className == ('active')) {
+        let randomNumber = generateRandomNumber();
+        document.querySelector('body').style.backgroundColor = namedColors[randomNumber];
+        colorName.textContent = namedColors[randomNumber];  
+    } else if (document.getElementById('hex-color').className == ('active')) {
+        let hexColor = '#';
+        for (let i = 0; i < 6; i++) {
+            hexColor += hexColors[generateRandomHexNumber()];
+        }
+        document.querySelector('body').style.backgroundColor = hexColor;
+        colorName.textContent = hexColor;
+
+    } else {
+
+    }
 });
 
 
@@ -38,5 +49,15 @@ btn.addEventListener('click', function() {
  */
 
 function generateRandomNumber() {
-    return Math.floor(Math.random() * namedColors[0].length);
+    return Math.floor(Math.random() * namedColors.length);
+}
+
+
+/**
+ * Generating random number for "hex color"
+ * @returns rendom number -> depending on arrays length
+ */
+
+function generateRandomHexNumber() {
+    return Math.floor(Math.random() * hexColors.length);
 }
