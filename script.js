@@ -8,10 +8,8 @@
 
 
 let colorType = document.querySelectorAll('a');
-console.log(colorType);
 
 let elementClicked = false;
-console.log(elementClicked);
 
 let btn = document.getElementById('btn');
 
@@ -37,7 +35,12 @@ btn.addEventListener('click', function() {
         colorName.textContent = hexColor;
 
     } else {
-
+        let r = generateRandomRgbNumber();
+        let g = generateRandomRgbNumber();
+        let b = generateRandomRgbNumber();
+        document.querySelector('body').style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+        colorName.textContent = `rgb(${r}, ${g}, ${b})`;
+        console.log(generateRandomRgbNumber());
     }
 });
 
@@ -60,4 +63,14 @@ function generateRandomNumber() {
 
 function generateRandomHexNumber() {
     return Math.floor(Math.random() * hexColors.length);
+}
+
+
+/**
+ * Genearting radnom number for "rgb color"
+ * 
+ */
+
+function generateRandomRgbNumber() {
+    return Math.floor(Math.random() * 256);
 }
