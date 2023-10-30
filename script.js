@@ -25,7 +25,7 @@ btn.addEventListener('click', function() {
     if (document.getElementById('named-color').className == ('active')) {
         let randomNumber = generateRandomNumber();
         document.querySelector('body').style.backgroundColor = namedColors[randomNumber];
-        colorName.textContent = namedColors[randomNumber];  
+        colorName.textContent = namedColors[randomNumber];
     } else if (document.getElementById('hex-color').className == ('active')) {
         let hexColor = '#';
         for (let i = 0; i < 6; i++) {
@@ -33,13 +33,12 @@ btn.addEventListener('click', function() {
         }
         document.querySelector('body').style.backgroundColor = hexColor;
         colorName.textContent = hexColor;
-
     } else {
         let r = generateRandomRgbNumber();
         let g = generateRandomRgbNumber();
         let b = generateRandomRgbNumber();
-        document.querySelector('body').style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-        colorName.textContent = `rgb(${r}, ${g}, ${b})`;
+        document.querySelector('body').style.backgroundColor = `rgb(${r},${g},${b})`;
+        colorName.textContent = `rgb(${r},${g},${b})`;
         console.log(generateRandomRgbNumber());
     }
 });
